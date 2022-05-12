@@ -18,7 +18,20 @@ function clear() {
 
 function round(digit) {
   const m = Math.pow(10, 8);
-  return Math.round(digit * m) / m;
+  let cuttedDigit = String(Math.round(digit * m) / m);
+
+  console.log("cutted", cuttedDigit);
+
+  if (cuttedDigit.length > 10) {
+    cuttedDigit = Number(cuttedDigit).toPrecision(7);
+  }
+
+  console.log("after precision", cuttedDigit);
+
+  return cuttedDigit;
+
+  // const m = Math.pow(10, 8);
+  // return Math.round(digit * m) / m;
 }
 
 function backspace() {
@@ -69,7 +82,10 @@ document.querySelector(".keybord").addEventListener("click", (e) => {
 
   if (digit.includes(key)) {
     if (secondNumber === "" && sign === "") {
-      if (key === "." && firstNumber.includes(".")) {
+      if (
+        (key === "." && firstNumber.includes(".")) ||
+        firstNumber.length > 10
+      ) {
         display.textContent = firstNumber;
         return;
       }
@@ -80,7 +96,10 @@ document.querySelector(".keybord").addEventListener("click", (e) => {
       result = false;
       display.textContent = secondNumber;
     } else {
-      if (key === "." && secondNumber.includes(".")) {
+      if (
+        (key === "." && secondNumber.includes(".")) ||
+        secondNumber.length > 10
+      ) {
         display.textContent = secondNumber;
         return;
       }
