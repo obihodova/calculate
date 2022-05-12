@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+
+body {
+  background-color: rgba(201, 207, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 360px;
+  height: 630px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.keybord {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 6px;
+}
+
+#zero {
+  grid-column: 2;
+}
+
+p {
+  margin-bottom: 10px;
+  width: 320px;
+  height: 120px;
+  border-radius: 30px;
+  border: none;
+  text-align: right;
+  background-image: linear-gradient(
+    0deg,
+    rgba(244, 246, 253, 1),
+    rgba(255, 255, 255, 1)
+  );
+  color: rgba(181, 200, 251, 1);
+  font-size: 50px;
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  border-radius: 90px;
+  border: none;
+  font-weight: 200;
+  border-top: rgba(241, 245, 253, 1) 4px solid;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.violet {
+  background-color: rgba(239, 243, 255, 1);
+  color: rgba(188, 202, 245, 1);
+}
+
+#result {
+  background-color: rgba(171, 195, 255, 1);
+  color: rgba(238, 247, 254, 1);
+}
