@@ -20,18 +20,11 @@ function round(digit) {
   const m = Math.pow(10, 8);
   let cuttedDigit = String(Math.round(digit * m) / m);
 
-  console.log("cutted", cuttedDigit);
-
   if (cuttedDigit.length > 10) {
     cuttedDigit = Number(cuttedDigit).toPrecision(7);
   }
 
-  console.log("after precision", cuttedDigit);
-
   return cuttedDigit;
-
-  // const m = Math.pow(10, 8);
-  // return Math.round(digit * m) / m;
 }
 
 function backspace() {
